@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> 그때 그시절 88올림픽</title>
+	<style type="text/css">
+     body{position: relative;
+     	overflow: hidden;
+     	width: 100%;
+     	background-image: url('2.png');
+     	background-size: cover;
+     }
+     #a{width: 200px; height: 500px;
+     	position: absolute;
+     	animation: right 5s forwards ease-in;
+
+
+     }
+
+        #b{width: 80px; height: 700px;
+     	position: absolute;
+     	animation: left 9s forwards ease-in;
+     }
+
+     
+
+        #c{width: 100px; top: 600px;
+     	position: absolute;
+     	animation: top 23s forwards ease-in;
+     }
+
+
+
+
+        #h{width:200px; top: 300px;
+     	position: absolute;
+     	animation: r 20s forwards ease-in;
+     }
+
+
+     	@keyframes right{
+     		from{left:0px; }
+     		to{left:2000px;}
+     	}
+
+	   @keyframes left{
+     		from{right: 0px; }
+     		to{right: 2000px;}
+     	}
+
+     	@keyframes top{
+     		from{right:0px; }
+     		to{right:2000px}
+     	}
+
+
+     	@keyframes r{
+     		from{left:0px; }
+     		to{left:400px}
+     	}
+
+
+	</style>
+</head>
+<body > 
+	<div id="a"></div>
+	<div id="b"></div>
+	<img src="g.png" id="c">
+	<img src="p.png" id="h">
+
+	<script type="text/javascript">
+		setInterval(dove,1000);
+
+		function dove(){
+			var total = 0;
+			for(var i=0; i < 6; i++){
+				var d = document.getElementById("a");
+				var newd = d.cloneNode(true);
+				newd.style.position = "absolute";
+				newd.style.background = "url('d1.gif') no-repeat";
+				newd.style.left =  Math.random()*window.innerWidth + "px";
+				newd.style.top = Math.random()*window.innerWidth + "px";
+			}
+			document.body.appendChild(newd);
+		}
+
+		setInterval(man,1000);
+
+		function man(){
+			var total = 0;
+			for(var i=0; i < 5; i++){
+				var f = document.getElementById("b");
+				var newf = f.cloneNode(true);
+				newf.style.position = "absolute";
+				newf.style.background = "url('m.png') no-repeat";
+				newf.style.top = random(200,200) + "px";	
+			}
+			document.body.appendChild(newf);	
+		}
+
+
+
+		function random(min, max) {
+	  		min = Math.ceil(min);
+	  		max = Math.floor(max);
+	  		return Math.floor(Math.random() * (max - min + 1)) + min;
+		}
+	</script>
+
+
+</body>
+</html>
+
